@@ -86,12 +86,13 @@ def zero_changer(tuple_of_lists):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:  10 minutes.
     # ------------------------------------------------------------------
-    total = 0
+    total = 1
     for k in range(len(tuple_of_lists)):
         for j in range(len(tuple_of_lists[k])):
             if tuple_of_lists[k] == 0:
                 total = total + 1
-                tuple_of_lists = total
+                tuple_of_lists[k] = total
+
 
 
 

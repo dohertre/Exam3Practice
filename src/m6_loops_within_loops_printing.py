@@ -93,7 +93,12 @@ def shape(r):
         for i in range(r - k):
             print('+', end='')
         for h in range(1):
-            print('!', end ='')
+            print('!', end='')
+        for l in range(r - k):
+            print((r - k - l), end='')
+        for m in range(k):
+            print('-', end='')
+
         print()
 
 # ----------------------------------------------------------------------

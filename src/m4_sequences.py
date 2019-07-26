@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  SEQUENCES.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Rebekah Doherty.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -141,7 +141,11 @@ def practice_problem4a(sequence):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 minutes.
     ####################################################################
-
+    new_list = []
+    for k in range(len(sequence)):
+        if sequence[k] == sequence[k + 1]:
+            new_list = new_list + [k]
+    return new_list
 
 def run_test_practice_problem4b():
     """ Tests the    practice_problem4b    function. """

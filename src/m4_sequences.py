@@ -147,6 +147,7 @@ def practice_problem4a(sequence):
             new_list = new_list + [k]
     return new_list
 
+
 def run_test_practice_problem4b():
     """ Tests the    practice_problem4b    function. """
     # ------------------------------------------------------------------
@@ -208,7 +209,12 @@ def practice_problem4b(sequence):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
-
+    greatest = 0
+    for k in range(len(sequence)):
+        if k % 2 == 0:
+            if sequence[k] > 0:
+                greatest = sequence[k]
+    return greatest
 
 def run_test_practice_problem4c():
     """ Tests the    practice_problem4c    function. """

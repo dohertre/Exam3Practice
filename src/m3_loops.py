@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  FOR and WHILE loops.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Rebekah Doherty.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -45,7 +45,7 @@ def main():
 def run_test_practice_problem3():
     """ Tests the   practice_problem3  function. """
     ####################################################################
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  practice_problem3  function defined below.
     #   Include at least ** 2 ** ADDITIONAL tests beyond those we wrote.
     #
@@ -134,6 +134,23 @@ def run_test_practice_problem3():
     # SUGGESTION: Ask an assistant to CHECK your tests to confirm
     #             that they are adequate tests!
     ####################################################################
+    #15th test
+    big_list = []
+    for k in range(100, 2000):
+        big_list.append(k)
+    tests.append(st.SimpleTestCase(practice_problem3,
+                                   [100, 2000,
+                                    - math.sqrt(2) - 0.00000000001],
+                                   big_list))
+
+    #16th test
+    big_list = []
+    for k in range(20, 120):
+        big_list.append(k)
+    tests.append(st.SimpleTestCase(practice_problem3,
+                                   [20, 120,
+                                    - math.sqrt(2) - 0.00000000001],
+                                   big_list))
 
 
 def practice_problem3(start, n, threshold):

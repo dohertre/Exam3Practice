@@ -92,6 +92,8 @@ def shape(r):
             print(' ', end='')
         for i in range(r - k):
             print('+', end='')
+        for h in range(1):
+            print('!', end ='')
         print()
 
 # ----------------------------------------------------------------------

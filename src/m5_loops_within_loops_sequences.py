@@ -107,7 +107,7 @@ def integers(sequence_of_sequences):
       :rtype: list of int
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     ####################################################################
@@ -141,7 +141,7 @@ def integers(sequence_of_sequences):
 def run_test_big_letters():
     """ Tests the    big_letters    function. """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this TEST function.
+    # DONE: 4. Implement this TEST function.
     #   It TESTS the  big_letters  function defined below.
     #   Include at least ** 1 ** ADDITIONAL test beyond those we wrote.
     # ------------------------------------------------------------------
@@ -173,6 +173,29 @@ def run_test_big_letters():
                           'OoPs'  # OP
                           'D',  # D
                           'OOps'  # OO
+                          ])
+    print('Expected is:', expected)
+    print('Actual is:  ', answer)
+
+    # Test 2:
+    expected = 'THISISSILLY'
+    answer = big_letters([(3, 1, 4, 2, 9),  # not a string
+                          'Thhhhhhhhhhhh?',  # OTSSS
+                          (1, 'ggggggHI?', 1),  # not a string
+                          [],  # not a string
+                          [1, 2, 4],
+                          ['oopS'],  # not a string
+                          'I say oopS',  #
+                          ['oopS'],  # not a string
+                          'I !',  # OOPS
+                          'L',  # A
+                          'L $$&*#%&&',  # PS
+                          'Y',  # B
+                          'oops',  # OS
+                          'k',  # C
+                          'oh no'  # OP
+                          ':)',  # D
+                          ';)'  # OO
                           ])
     print('Expected is:', expected)
     print('Actual is:  ', answer)
@@ -229,7 +252,14 @@ def big_letters(sequence_of_sequences):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:  12 minutes.
     # ------------------------------------------------------------------
-
+    #had to google how to tell if capital
+    new_string = ''
+    for k in range(len(sequence_of_sequences)):
+        for j in range(len(sequence_of_sequences[k])):
+            if type(sequence_of_sequences[k][j]) == str:
+                if sequence_of_sequences[k][j].isupper():
+                    new_string = new_string + sequence_of_sequences[k][j]
+    return new_string
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------

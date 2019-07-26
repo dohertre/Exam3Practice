@@ -209,7 +209,7 @@ def practice_problem4b(sequence):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
-    greatest = 0
+    greatest = sequence[0]
     for k in range(len(sequence)):
         if k % 2 == 0:
             if sequence[k] > greatest:

@@ -212,7 +212,7 @@ def practice_problem4b(sequence):
     greatest = 0
     for k in range(len(sequence)):
         if k % 2 == 0:
-            if sequence[k] > 0:
+            if sequence[k] > greatest:
                 greatest = sequence[k]
     return greatest
 

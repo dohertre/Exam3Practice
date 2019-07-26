@@ -78,7 +78,7 @@ def zero_changer(tuple_of_lists):
       :type tuple_of_lists: tuple of list[int]
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     # ------------------------------------------------------------------
@@ -86,12 +86,12 @@ def zero_changer(tuple_of_lists):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:  10 minutes.
     # ------------------------------------------------------------------
-    total = 1
+    total = 0
     for k in range(len(tuple_of_lists)):
         for j in range(len(tuple_of_lists[k])):
-            if tuple_of_lists[k] == 0:
+            if tuple_of_lists[k][j] == 0:
                 total = total + 1
-                tuple_of_lists[k] = total
+                tuple_of_lists[k][j] = total
 
 
 

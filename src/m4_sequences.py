@@ -134,7 +134,7 @@ def practice_problem4a(sequence):
       :type sequence: list | tuple | string
     """
     ####################################################################
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -142,7 +142,7 @@ def practice_problem4a(sequence):
     #    TIME ESTIMATE:   15 minutes.
     ####################################################################
     new_list = []
-    for k in range(len(sequence)):
+    for k in range(len(sequence) - 1):
         if sequence[k] == sequence[k + 1]:
             new_list = new_list + [k]
     return new_list

@@ -178,7 +178,7 @@ def run_test_big_letters():
     print('Actual is:  ', answer)
 
     # Test 2:
-    expected = 'THISISSILLY'
+    expected = 'TISILLY'
     answer = big_letters([(3, 1, 4, 2, 9),  # not a string
                           'Thhhhhhhhhhhh?',  # OTSSS
                           (1, 'ggggggHI?', 1),  # not a string
@@ -230,7 +230,7 @@ def big_letters(sequence_of_sequences):
     Precondition:  the given argument is a sequence of sequences.
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     ####################################################################
@@ -255,8 +255,8 @@ def big_letters(sequence_of_sequences):
     #had to google how to tell if capital
     new_string = ''
     for k in range(len(sequence_of_sequences)):
-        for j in range(len(sequence_of_sequences[k])):
-            if type(sequence_of_sequences[k][j]) == str:
+        if type(sequence_of_sequences[k]) == str:
+            for j in range(len(sequence_of_sequences[k])):
                 if sequence_of_sequences[k][j].isupper():
                     new_string = new_string + sequence_of_sequences[k][j]
     return new_string
